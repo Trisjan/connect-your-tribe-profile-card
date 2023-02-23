@@ -1,13 +1,33 @@
 <%- include('./partials/head') %>
 
 <section class="maincontainer">
-  <section class="card">
-    <div class="front">
-      Hello world!
-    </div>
-    <div class="back">
-
-    </div>
+  <section class="card-top">
+    <section class="avatar">
+      <img src="<%= member.avatar %>" alt="avatar van <%= member.name %>">
+    </section>
+    <section class="name">
+      <h1><%= member.name %></h1>
+      <h2>Student Frontend 
+        <br>
+        Design & Development</h2>
+      <a href="<%= member.website %>"><div>Portfolio</div></a>
+    </section>
+  </section>
+  <section class="card-middle">
+    <span class="bio">
+      <%= member.bio.html %>
+    </span>
+  </section>
+  <section class="card-bottom">
+    <a href="https://www.linkedin.com/in/trisjanmustamu/">
+      <img src="assets/linkedin.svg" alt="linkedin">
+    </a>
+    <a href="https://github.com/Trisjan">
+      <img src="assets/github.svg" alt="github">
+    </a>
+    <a href="https://www.instagram.com/trisjanm/">
+      <img src="assets/instagram.svg" alt="instagram">
+    </a>
   </section>
 </section>
 

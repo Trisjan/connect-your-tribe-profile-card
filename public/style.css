@@ -1,51 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap');
+
 * {
 	box-sizing: border-box;
-	--main-color: #B8B4A8;
+	--main-color: #F5EBE0;
 	--secondair-color: #836958;
+	--background-color: #161925;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-	background-color: #4B341D;
+	background-color: white;
+	color: var(--secondair-color);
 }
 
-
+a {
+	text-decoration: none;
+}
 
 .maincontainer {
 	position: absolute;
-	width: 15.625rem;
-	height: 20rem;
+	width: 25rem;
+	height: 25rem;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	background-color: var(--main-color);
+	max-width: 100%;
+	border-radius: 2.5rem;
 }
 
-.card {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	transform-style: preserve-3d;
-	transition: all 0.8s ease;
+.card-top {
+	margin: 0 1.5rem;
+	margin-top: 2.3125rem;
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
 }
 
-.front {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	background: var(--main-color);
+.card-top img {
+	background-color: white;
+	width: 8.375rem;
+	height: 8.375rem;
+	border-radius: 1.125rem;
+}
+
+.card-top .name {
+	margin: 0 1rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.card-top .name h1 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.card-top .name h2 {
+	font-size: 0.875rem;
+	font-weight: 300;
+}
+
+.card-top .name div {
+	width: 10.625rem;
+	height: 2.1875rem;
+	border-radius: 0.6875rem;
+	font-weight: 600;
+	font-size: 0.875rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
 	color: var(--secondair-color);
 }
 
-.back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	background: var(--main-color);
-	color: var(--secondair-color);
-	transform: rotateY(180deg);
+.card-middle {
+	margin: 2rem 0;
+	margin-left: 1.5rem;
+	margin-right: 2.5rem;
+	font-weight: 400;
 }
 
-.flipCard {
-	transform: rotateY(180deg);
+.card-bottom {
+	margin: 1.84375rem;
+	display: flex;
+	justify-content: center;
+}
+
+.card-bottom img {
+	margin: 0 1.84375rem;
 }
